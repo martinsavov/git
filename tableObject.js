@@ -69,7 +69,7 @@ class ObjectDataPreviewTable{
         
         //since the response we are getting is an object
         //we are calling the object itself and the desired index
-        data.forEach(obj, index => {
+        data.forEach((obj, index) => {
             //obj -> data[i]
             //index -> i
 

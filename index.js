@@ -6,7 +6,7 @@ const initTable = props =>{
 }
 
 const app = async () => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('https://raw.githubusercontent.com/vega/vega/master/docs/data/movies.json')
         .then(response => response.json())
         .then(data => {
             initTable({
