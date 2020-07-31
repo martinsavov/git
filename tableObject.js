@@ -70,9 +70,12 @@ class ObjectDataPreviewTable{
         //since the response we are getting is an object
         //we are calling the object itself and the desired index
         data.forEach(obj, index => {
+            //obj -> data[i]
+            //index -> i
+
             const tr = document.createElement('tr');
             //giving the tr attrubute data-index
-            tr.setAttribute('data-index',index);
+            tr.setAttribute('data-index',index); 
 
             //looping through the object keys, to get and append them to the tbody
             Object.keys(obj).forEach(key => {
