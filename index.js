@@ -1,7 +1,7 @@
 import ObjectDataPreviewModal from "./modalObject.js";
 import ObjectDataPreviewTable from "./tableObject.js";
 
-const initTable = props =>{
+const initTable = props => {
     new ObjectDataPreviewTable(props);
 }
 
@@ -11,9 +11,9 @@ const app = async () => {
         .then(data => {
             initTable({
                 data,
-                containerId:'tableContainer',
-                onRowClick: function (){
-                    console.log('clicked')
+                containerId: 'tableContainer',
+                onRowClick: function (e) {
+                    e.target.style.backgroundColor = 'red';
                 }
             })
         })
