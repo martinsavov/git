@@ -12,7 +12,7 @@ class ObjectDataPreviewModal {
         this._contentContainer = modalNode.querySelector('.modal-content');
         this._bodyContainer = modalNode.querySelector('.modal-body');
 
-        this._modal = new Modal(modalNode, options);
+        this._modal = new Modal(modalNode, options)
     }
     //check if there is an existing modal already 
     getInstance = () => this._modal;
@@ -26,7 +26,7 @@ class ObjectDataPreviewModal {
     getBody = () => this._bodyContainer;
     setBody = content => {
         const container = this._bodyContainer;
-        container.innerHHTML = "";
+        container.innerHTML = "";
         container.appendChild(content);
     } 
     show = () => {
