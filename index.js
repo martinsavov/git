@@ -4,8 +4,9 @@ import ObjectDataPreviewTable from "./tableObject.js";
 
 const initModal = props => {
     const modal = new ObjectDataPreviewModal(props);
+
     return modal;
-}
+} 
 
 const renderFormFromObject = obj => {
     const form = document.createElement('form');
@@ -27,27 +28,13 @@ const renderFormFromObject = obj => {
         const inputContainer = document.createElement('div');
         inputContainer.className = 'col-sm-7';
 
-        /**
-         * THIS COULD CAUSE AN ERROR, IF BLANKS Replace:
-         *  if(typeof data === 'string'){
-         input.type = 'text';
-        } else if (typeof data === 'number'){
-            input.type === inputType;
-        }
-         *  const input = document.createElement('input');
-         * WITH:
-         * input.type = 'text';
-         */
+        
         const input = document.createElement('input');
         input.id = uniqueId
         input.className = 'form-control';
 
         //check for different input types
-        if(typeof data === 'string'){
-            input.type = 'text';
-        } else if (typeof data === 'number'){
-            input.type === inputType;
-        }
+        input.type = 'text';
         /**
          * we are starting to linking the tableObj.. elements with the
          * form 
@@ -109,7 +96,6 @@ const rowClick = (modal, data) => event => {
     modal.show();
 }
 
-updateOnSave();
 
 const app = async () => {
     const modal = initModal({containerId: 'myModal'});
