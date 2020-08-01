@@ -13,7 +13,7 @@ const app = async () => {
                 data,
                 containerId: 'tableContainer',
                 onRowClick: function (e) {
-                    e.target.style.backgroundColor = 'red';
+                    e.target.style.backgroundColor = 'green';
                 }
             })
         })
