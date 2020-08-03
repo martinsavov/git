@@ -65,7 +65,7 @@ const updateOnSave = (modal, tr, dataObj) => {
         const inputSelector = `input[data-key=${key}]`;
         const newValue = modalBody.querySelector(inputSelector).value;
 
-        cell.textContet = newValue;
+        cell.textContent = newValue;
         dataObj[key] = newValue;
     });
 
